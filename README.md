@@ -13,7 +13,7 @@ is_overflow(int32_t a, int32_t b, Operation op)
   반환값이 1이면 오버플로 발생 0이면 발생하지 않음 -1이면 잘못된 연산이나 0으로 나눔을 의미합니다.
 
 int_to_binary(uint32_t value, char *buffer, size_t buffer_size)
-  32비트의 unsigned 정수를 2진수 문자열로 변환합니다.
+  32비트의 부호 없는 정수를 2진수 문자열로 변환합니다.
   변환에 성공하면 0을 버퍼가 잘못되거나 공간이 부족하면 -1을 반환합니다.
 
 reverse_bits(uint32_t value)
@@ -44,7 +44,7 @@ extract_bits(uint32_t value, unsigned int start, unsigned int length)
 
 insert_bits(uint32_t value, uint32_t new_value, unsigned int start, unsigned int length)
   start 위치에서 length만큼을 new_value로 교체합니다.
-  질못된 범위거나 length가 0이면 value를 그대로 반환합니다.
+  잘못된 범위거나 length가 0이면 value를 그대로 반환합니다.
 
 -----------------------------------------------------------------
 
@@ -67,7 +67,7 @@ int_util/
 Build
 
 make 명령어로 빌드합니다.
-빌드 과정에서 정적 라이브러리, 공유 라이브러리, 정적 라이브러리 테스트, 공유 라이브러리 테스트, 런타임 동적로딩 테스트 파일이 생성됩니다,
+빌드 과정에서 정적 라이브러리, 공유 라이브러리, 정적 라이브러리 테스트, 공유 라이브러리 테스트, 런타임 동적로딩 테스트 파일이 생성됩니다.
 
 -----------------------------------------------------------------
 
@@ -92,7 +92,7 @@ gcc -Iinclude test/test_runtime.c -ldl -o test_runtime
 Test
 
 make test
-  정적 라이브러리, 공유 라이브러리, 런타임 동적 도딩의 테스트를 순서대로 실행합니다.
+  정적 라이브러리, 공유 라이브러리, 런타임 동적 로딩의 테스트를 순서대로 실행합니다.
 
 -----------------------------------------------------------------
 
