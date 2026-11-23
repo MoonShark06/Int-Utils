@@ -10,7 +10,7 @@ Features
 
 is_overflow(int32_t a, int32_t b, Operation op) 
   정수의 덧셈, 뺄셈, 곱셈, 나눗셈에서 오버플로 여부를 검사합니다.
-  반환값이 1이면 오버플로 발생 0이면 발생하지 않음 -1이면 잘못된 접근입니다.
+  반환값이 1이면 오버플로 발생 0이면 발생하지 않음 -1이면 잘못된 연산이나 0으로 나눔을 의미합니다.
 
 int_to_binary(uint32_t value, char *buffer, size_t buffer_size)
   32비트의 unsigned 정수를 2진수 문자열로 변환합니다.
